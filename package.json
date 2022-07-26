@@ -1,0 +1,22 @@
+{
+  "name": "group-chat-demo",
+  "version": "1.0.0",
+  "description": "Demo of a group chat made using socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D3N2-A/Group-chat-Demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D3N2-A/Group-chat-Demo/issues"
+  },
+  "homepage": "https://github.com/D3N2-A/Group-chat-Demo#readme",
+  "dependencies": {
+    "socket.io": "^4.5.1"
+  }
+}
