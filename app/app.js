@@ -1,5 +1,5 @@
 const socket = io("ws://localhost:8080");
-
+const blip = new Audio("./blip.wav");
 socket.on("message", (text) => {
   const d = new Date();
   const el = document.createElement("li");
@@ -13,4 +13,5 @@ socket.on("message", (text) => {
 document.querySelector("button").onclick = () => {
   const text = document.querySelector("input").value;
   socket.emit("message", text);
+  blip.play();
 };
