@@ -11,7 +11,8 @@ socket.on("message", (text) => {
 });
 
 document.querySelector("button").onclick = () => {
+  blip.play();
   const text = document.querySelector("input").value;
   socket.emit("message", text);
-  blip.play();
+  
 };

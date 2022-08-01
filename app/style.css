@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   padding: 0;
@@ -12,19 +13,26 @@
 }
 
 li {
+  display: block;
+  position: relative;
+  padding: 10px;
   margin: 2px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Major Mono Display", monospace;
   opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  transform: translate(2px, 2px);
+
   animation-name: messageIn;
   animation-duration: 0.3s;
   border-radius: 5px;
   list-style: none;
+  transition: transform 0.4s ease-out;
+}
+li:hover {
+  transform: translate(-4px, -4px);
 }
 @keyframes messageIn {
   0% {
-    transform: translate(0);
+    transform: translate(2px, 2px);
     opacity: 0.1;
   }
   40% {
@@ -40,17 +48,54 @@ li {
     opacity: 1;
   }
 }
+
 .message_box {
-  font-family: "Roboto", sans-serif;
+  font-family: "Major Mono Display", monospace;
   border-radius: 2px;
   outline: 0;
   border: 1px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+  outline: 0.1px dotted;
+  height: 5vh;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
+
 .message_box:focus {
-  border-radius: 5px;
-  box-shadow: rgba(208, 208, 227, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.199) 0px 18px 36px -18px inset;
-  transition: ease-in 0.07s;
+  outline: 0.5px solid #3fa796;
+
+  border-radius: 2px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  transition: ease-in-out 0.2s;
+}
+
+p {
+  font-size: 0.55rem;
+  font-weight: 500;
+  margin-top: 2%;
+  margin-left: 1%;
+  padding: 0.1rem 0rem;
+  width: 50px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.064);
+}
+
+.btn {
+  width: 25%;
+  height: 2rem;
+  color: white;
+  background-color: #3fa796;
+  border: white;
+  border-radius: 15px;
+  outline: 0;
+  font-family: "Major Mono Display", monospace;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: #2a094465 5px 5px, #2a094427 10px 10px, #2a09441e 15px 15px,
+    #2a09440f 20px 20px;
+  transform: translate(-1px, -1px);
 }
